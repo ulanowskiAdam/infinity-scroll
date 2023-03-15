@@ -1,0 +1,12 @@
+<div class="header">
+  <p>Scroll down for more kittens</p>
+</div>
+
+<div class="card-container" infiniteScroll [infiniteScrollDistance]="2" [infiniteScrollThrottle]="500"
+  (scrolled)="onScroll()">
+  <mat-card class="card" *ngFor="let cat of cats">
+
+    <img [src]="cat.url" alt="Random Cat Image">
+
+  </mat-card>
+</div>
